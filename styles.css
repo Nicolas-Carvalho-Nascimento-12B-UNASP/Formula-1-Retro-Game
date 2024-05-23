@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+    font-family: 'Radio Canada', sans-serif; /* Fonte mais estilizada */
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Para posicionar a faixa vermelha corretamente */
+}
+
+canvas {
+    border: 1px solid #fff;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: none; /* Escondido inicialmente */
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 25px; /* Botão redondo */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    font-family: 'Radio Canada', sans-serif; /* Fonte mais estilizada */
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+.red-flag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: none; /* Escondido inicialmente */
+    animation: blink 1s infinite; /* Animação de piscar */
+    width: 300px; /* Largura da faixa igual à largura da pista */
+    text-align: center;
+    box-sizing: border-box; /* Para incluir padding na largura */
+    font-family: 'Radio Canada', sans-serif; /* Fonte mais estilizada */
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
